@@ -1,9 +1,6 @@
 package Java;
 
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class RemoveDuplicates {
     /*Remove characters which occurs twice altogether*/
@@ -31,5 +28,25 @@ public class RemoveDuplicates {
             }
         }
         return result.toString();
+    }
+    /*This method will remove the character altogether and keep only unique chars */
+    public static String removeDupChars(String str){
+        HashMap<Character,Integer>map = new LinkedHashMap<>();
+        StringBuilder result = new StringBuilder();
+        for(char ch : str.toCharArray()){
+            map.put(ch,map.getOrDefault(ch,0)+1);
+        }
+        map.forEach((ch,count)->{
+            if(count==1){
+                result.append(ch);
+            }
+        });
+        return result.toString();
+    }
+
+    public static void main(String[] args) {
+        String input = "test";
+        String output = removeDupChars(input);
+        System.out.println(output);
     }
 }
