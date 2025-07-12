@@ -67,14 +67,14 @@ public class ReadDataFromExcel {
     public static void main(String[] args) throws IOException {
         String filePath = "C:\\Users\\PALASH TIRPUDE\\Desktop\\testingReadEcelData.xlsx";
         String sheetName = "Sheet1";
-        /*String[][] output = readExcelData(filePath, sheetName);
+        String[][] output = readExcelData(filePath, sheetName);
         for (String[] row : output) {
             System.out.println(Arrays.toString(row));
-        }*/
-        List<String> rows = readSinglerow(filePath, sheetName, 0);
+        }
+        /*List<String> rows = readSinglerow(filePath, sheetName, 0);
         for(String row:rows){
             System.out.println(row);
-        }
+        }*/
 
     }
 }
