@@ -2,30 +2,33 @@ package Java;
 
 public class InterviewTheory {
 }
-class PolyMorPhiSM{
+
+class PolyMorPhiSM {
     //method overloading
-    public static void methodA(){
+    public static void methodA() {
         System.out.println("In method A");
     }
-     public static int methodA(int A){
-         System.out.println("In method A with Number "+A);
-         return A;
-     }
+
+    public static int methodA(int A) {
+        System.out.println("In method A with Number " + A);
+        return A;
+    }
 
     public static void main(String[] args) {
         methodA();
         methodA(3);
     }
 }
+
 //Method Overriding
-class Animal{
-    public static void sound(){
+class Animal {
+    public static void sound() {
         System.out.println("Animal make sound");
     }
 }
 
-class dog extends Animal{
-    public static void sound(){
+class dog extends Animal {
+    public static void sound() {
         System.out.println("Dog make sound bark bark");
     }
 
@@ -35,20 +38,23 @@ class dog extends Animal{
         myAnimal.sound();
     }
 }
-abstract class instrument{
+
+abstract class instrument {
     abstract void instrumentName();
-    void instrumentSound(){
+
+    void instrumentSound() {
         System.out.println("This is Instrument sound");
     }
 }
 
-interface instrumentInfo{
+interface instrumentInfo {
     void instrumentPrice();
+
     void instrumentwarranty();
 }
 
-class guitar extends instrument implements instrumentInfo{
-    void instrumentName(){
+class guitar extends instrument implements instrumentInfo {
+    void instrumentName() {
         System.out.println("Instrument name is guitar");
     }
 
