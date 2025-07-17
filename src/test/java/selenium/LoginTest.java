@@ -4,7 +4,6 @@ import POM.LoginTestIngPOM;
 import POM.LogoutPOM;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
